@@ -1,0 +1,71 @@
+/* FONTS FOR GAME */
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&display=swap'); */
+
+/* DESIGN FOR GAME */
+body {
+    background-color: #F0DCCA;
+    margin: 0px;
+    padding: 0px;
+}
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:  'Bungee Shade';
+    font-size: 70px; 
+    animation: color-change 0.5s infinite;
+}
+#container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 20px;
+    margin: 50px;
+    justify-content: center;
+    
+}
+#card {
+display: flex;
+background-color: black; 
+height: 175px;
+width: 125px;
+animation: color-change-card 0.5s infinite;
+
+}
+/* COLOR ANIMATION FOR HEADER */
+@keyframes color-change {
+    0% { color: #2AF5FF; }
+    10% { color: #F9DC5C; }
+    25% { color: #FFA400; } 
+    50% { color: #FE5D9F; }
+    100% { color: #ED254E; }
+} 
+
+/* COLOR ANIMATION FOR CARDS */
+@keyframes color-change-card {
+    0% { color: #2AF5FF; }
+    10% { color: #F9DC5C; }
+    25% { color: #FFA400; } 
+    50% { color: #FE5D9F; }
+    100% { color: #ED254E; }
+}
+    
+/* MOBILE LAYOUT
+@media screen and (max-width: 708px ) {
+    #header {
+        display: flex;
+        justify-content: center;
+        font-family:  'Bungee Shade';
+        font-size: 35px; 
+        animation: color-change 0.5s infinite;
+    }
+
+    #container {
+        display: grid;
+}
+
+    #card {
+        background-color: black; 
+    }
+} */
