@@ -26,12 +26,21 @@ body {
     
 }
 #card {
-display: flex;
-background-color: black; 
+display: relative;
+background-color: #B8BACF; 
 height: 175px;
 width: 125px;
 animation: color-change-card 0.5s infinite;
+border-radius: 5px;
 
+}
+.cards-face {
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 /* COLOR ANIMATION FOR HEADER */
 @keyframes color-change {
