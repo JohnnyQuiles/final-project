@@ -17,16 +17,31 @@ body {
     font-size: 70px;  
     animation: color-change 0.5s infinite;
 }
+#timer{
+    display: flex;
+    justify-content: center; 
+    font-family: 'Henny Penny';
+    font-size: 25px;
+    animation: color-change 0.5s infinite;
+}
+#score {
+    display: flex;
+    justify-content: center; 
+    font-family: 'Henny Penny';
+    font-size: 25px;
+    animation: color-change 0.5s infinite;
+}
 #container {
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-gap: 20px;
-    margin: 50px;
+    margin: 10px;
     justify-content: center;
     
 }
 #card {
-display: relative;
+display: flex;
+justify-content: center;
 background-color: #B8BACF; 
 height: 175px;
 width: 125px;
@@ -34,24 +49,24 @@ animation: color-change-card 0.5s infinite;
 border-radius: 5px;
 
 }
-.cards-face {
+.cards-back {
     display: flex;
     justify-content: center;
     padding: 35px;
 
     
 }
-
 .flipCard {
     transform: rotateY(180deg);
 }
 /* COLOR ANIMATION FOR HEADER */
 @keyframes color-change {
     0% { color: #9D8DF1; }
-    10% { color: #91C4F2; }
+    5% { color: #91C4F2; }
     25% { color: #F991CC; } 
     50% { color: #FE5D9F; }
-    100% { color: #C879FF; }
+    75% { color: #C879FF; }
+    100% { color: #91C4F2; }
 }  
 
 /* COLOR ANIMATION FOR CARDS */
