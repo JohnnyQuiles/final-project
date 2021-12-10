@@ -1,7 +1,7 @@
 /* FONTS FOR GAME */
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
-/* @import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap'); */
-/* @import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&display=swap');  
 
 /* DESIGN FOR GAME */
 body {
@@ -13,8 +13,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family:  'Bungee Shade';
-    font-size: 70px; 
+    font-family:  'Henny Penny';
+    font-size: 70px;  
     animation: color-change 0.5s infinite;
 }
 #container {
@@ -35,21 +35,24 @@ border-radius: 5px;
 
 }
 .cards-face {
-    position: absolute;
-
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding: 35px;
+
     
+}
+
+.flipCard {
+    transform: rotateY(180deg);
 }
 /* COLOR ANIMATION FOR HEADER */
 @keyframes color-change {
-    0% { color: #2AF5FF; }
-    10% { color: #F9DC5C; }
-    25% { color: #FFA400; } 
+    0% { color: #9D8DF1; }
+    10% { color: #91C4F2; }
+    25% { color: #F991CC; } 
     50% { color: #FE5D9F; }
-    100% { color: #ED254E; }
-} 
+    100% { color: #C879FF; }
+}  
 
 /* COLOR ANIMATION FOR CARDS */
 @keyframes color-change-card {
