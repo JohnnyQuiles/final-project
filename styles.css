@@ -4,6 +4,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&display=swap');  
 
 /* DESIGN FOR GAME */
+* {
+    margin: 0;
+    padding: 0;
+}
 body {
     background-color: #F0DCCA;
     margin: 0px;
@@ -16,8 +20,8 @@ body {
     font-family:  'Henny Penny';
     font-size: 70px;  
     animation: color-change 0.5s infinite;
-}
-#timer{
+} 
+#timer {
     display: flex;
     justify-content: center; 
     font-family: 'Henny Penny';
@@ -39,26 +43,35 @@ body {
     justify-content: center;
     
 }
-#card {
-display: flex;
-justify-content: center;
-background-color: #B8BACF; 
-height: 175px;
-width: 125px;
-animation: color-change-card 0.5s infinite;
-border-radius: 5px;
-
-}
-.cards-back {
+.card {
     display: flex;
     justify-content: center;
-    padding: 35px;
+    background-color: #B8BACF; 
+    height: 175px;
+    width: 125px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.front{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    backface-visibility: hidden;
+    background-color: #91C4F2;
+    transform: rotateY(180deg); 
+}
+.back {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 40px; 
+    color: #FFF4EC; 
+    font-family: 'Henny Penny';
+    font-size: 20px;
+}
 
-    
-}
-.flipCard {
-    transform: rotateY(180deg);
-}
+
 /* COLOR ANIMATION FOR HEADER */
 @keyframes color-change {
     0% { color: #9D8DF1; }
@@ -71,11 +84,8 @@ border-radius: 5px;
 
 /* COLOR ANIMATION FOR CARDS */
 @keyframes color-change-card {
-    0% { color: #2AF5FF; }
-    10% { color: #F9DC5C; }
-    25% { color: #FFA400; } 
-    50% { color: #FE5D9F; }
-    100% { color: #ED254E; }
+    50% { box-shadow: 5px 10px 20px; color:#F991CC}
+
 }
     
 /* MOBILE LAYOUT
