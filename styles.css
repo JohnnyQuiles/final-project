@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap'); 
 @import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&display=swap');  
-
 /* DESIGN FOR GAME */
 * {
     margin: 0;
@@ -10,8 +9,8 @@
 }
 body {
     background-color: #F0DCCA;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 #header {
     display: flex;
@@ -41,37 +40,48 @@ body {
     grid-gap: 20px;
     margin: 10px;
     justify-content: center;
-    
+    perspective: 500px;
 }
 .card {
     display: flex;
     justify-content: center;
+    position: relative;
     background-color: #B8BACF; 
     height: 175px;
     width: 125px;
     border-radius: 5px;
     cursor: pointer;
+    box-shadow: 3px 4px ; 
+    animation: color-change 0.5s infinite;
+    transform-style: preserve-3d; 
+    transition: 500ms ease-in-out;
 }
-.front{
-    position: absolute;
-    width: 100%;
-    height: 100%;
+.front {
+    display: flex;
     justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 175px;
+    width: 125px;
     backface-visibility: hidden;
-    background-color: #91C4F2;
-    transform: rotateY(180deg); 
+    background: #91C4F2;
+    border-radius: 5px;
+    transform : rotateY(-180deg);
 }
 .back {
     display: flex;
     justify-content: center;
     text-align: center;
+    position: absolute;
     padding: 40px; 
     color: #FFF4EC; 
     font-family: 'Henny Penny';
     font-size: 20px;
+    backface-visibility: hidden; 
 }
-
-
+.flipCard {
+    transform: rotateY(180deg); 
+}
 /* COLOR ANIMATION FOR HEADER */
 @keyframes color-change {
     0% { color: #9D8DF1; }
@@ -81,7 +91,6 @@ body {
     75% { color: #C879FF; }
     100% { color: #91C4F2; }
 }  
-
 /* COLOR ANIMATION FOR CARDS */
 @keyframes color-change-card {
     50% { box-shadow: 5px 10px 20px; color:#F991CC}

@@ -6,30 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>Animal-Matcher</title>
 </head>
 
 <body>
     <!-- GAME HEADER  -->
-    <h1 id='header'>Animal Matcher</h1>
+    <h1 id='header'>Animal-Matcher</h1>
     <div id='timer'>
-        <div>Timer: 0:00</div>
+        <div>Timer: <span id ='time-remaining'>0:00</span></div>
     </div>
     <div id='score'>
-        <div>Score: 0</div>
+        <div>Score: <span id='score-keeper'>0</span></div>
     </div>
     <!-- GAME CONTAINER TO HOLD CARDS --> 
     <div id='container'>
-<!-- BACK OF THE CARDS THAT SHOW ANIMALS -->
-        <div class='card'>
+    <!-- ELEPHANT -->
+    <div class='card' id='card'>
             <div class='front'>
                 <img id='elephant' src='pictures/elephant.png'>
             </div>
-            <div class='back'>
+            <div class='back'> 
                     <h3>Animal Matcher</h3>
                 </div>
         </div>
-        <div class='card'>
+            <!-- GIRAFFE -->
+        <div class='card' id='card'>
             <div class='front'>
                 <img id='giraffe' src='pictures/giraffe.png'>
             </div>
@@ -37,7 +38,8 @@
                 <h3>Animal Matcher</h3>
             </div>
         </div>
-        <div class='card'>
+        <!-- PANDA -->
+        <div class='card' id='card'>
             <div class='front'>
                 <img id='panda' src='pictures/panda.png'>
             </div>
@@ -45,7 +47,8 @@
                 <h3>Animal Matcher</h3>
             </div>
         </div>
-        <div class='card'>
+        <!-- COW -->
+        <div class='card' id='card'>
             <div class='front'>
                 <img id='cow' src='pictures/cow.png'>
             </div>
@@ -53,7 +56,8 @@
                 <h3>Animal Matcher</h3>
             </div>
         </div>
-        <div class='card'>
+        <!-- PANDA -->
+        <div class='card' id='card'>
             <div class='front'>
                 <img id='panda' src='pictures/panda.png'>
             </div>
@@ -61,7 +65,8 @@
                 <h3>Animal Matcher</h3>
             </div>
         </div>
-        <div class='card'>
+        <!-- PIG -->
+        <div class='card' id='card'>
             <div class='front'>
                 <img id='pig' src='pictures/pig.png'>
             </div>
@@ -69,7 +74,8 @@
                 <h3>Animal Matcher</h3>
             </div>
         </div>
-        <div class='card'>
+        <!-- GIRAFFE -->
+        <div class='card' id='card'>
             <div class='front'>
                 <img id='giraffe' src='pictures/giraffe.png'>
             </div>
@@ -77,7 +83,8 @@
                 <h3>Animal Matcher</h3>
             </div>
         </div>
-        <div class='card'>
+        <!-- HIPPO -->
+        <div class='card' id='card'>
             <div class='front'>
                 <img id='hippo' src='pictures/hippo.png'>
             </div>
@@ -85,7 +92,8 @@
                 <h3>Animal Matcher</h3>
             </div>
         </div>
-        <div class='card'>
+        <!-- HIPPO -->
+        <div class='card' id='card'>
             <div class='front'>
                 <img id='hippo' src='pictures/hippo.png'>
             </div>
@@ -93,7 +101,8 @@
                 <h3>Animal Matcher</h3>
             </div>
         </div>
-        <div class='card'>
+        <!-- COW -->
+        <div class='card' id='card'>
             <div class='front'>
                 <img id='cow' src='pictures/cow.png'>
             </div>
@@ -101,7 +110,8 @@
                 <h3>Animal Matcher</h3>
             </div>
         </div>
-        <div class='card'>
+        <!-- PIG -->
+        <div class='card' id='card'>
             <div class='front'>
                 <img id='pig' src='pictures/pig.png'>
             </div>
@@ -109,7 +119,8 @@
                 <h3>Animal Matcher</h3>
             </div>
         </div>
-        <div class='card'>
+        <!-- ELEPHANT -->
+        <div class='card' id='card'>
             <div class='front'>
                 <img id='elephant' src='pictures/elephant.png'>
             </div>
@@ -120,7 +131,7 @@
     </div>
 
     </div>
-
+    <!-- JAVASCRIPT -->
     <script src="main.js"></script>
 </body>
 
