@@ -20,6 +20,23 @@ body {
     font-size: 70px;  
     animation: color-change 0.5s infinite;
 } 
+.start-game{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    font-family: 'Henny Penny';
+}
+.start-game.visible {
+    display: flex;
+    animation: start-game 250ms forwards;
+}
 #timer {
     display: flex;
     justify-content: center; 
@@ -42,6 +59,18 @@ body {
     justify-content: center;
     perspective: 500px;
 }
+.card.matched .img{
+    transition: transform 500ms ease-in-out;
+    animation: dance 1s linear infinite 500ms;
+} 
+.card.visible {
+    transform: rotateY(-180deg);
+}
+.img {
+    position: relative;
+    transition: transform 500ms ease-in-out; 
+    backface-visibility: hidden;
+}
 .card {
     display: flex;
     justify-content: center;
@@ -51,10 +80,10 @@ body {
     width: 125px;
     border-radius: 5px;
     cursor: pointer;
-    box-shadow: 3px 4px ; 
+    box-shadow: 3px 4px; 
     animation: color-change 0.5s infinite;
     transform-style: preserve-3d; 
-    transition: 500ms ease-in-out;
+    transition: transform 500ms ease-in-out;
 }
 .front {
     display: flex;
@@ -66,7 +95,8 @@ body {
     backface-visibility: hidden;
     background: #91C4F2;
     border-radius: 5px;
-    transform : rotateY(-180deg);
+    overflow: hidden;
+    transform : rotateY(180deg);
 }
 .back {
     display: flex;
@@ -80,7 +110,31 @@ body {
     backface-visibility: hidden; 
 }
 .flipCard {
-    transform: rotateY(180deg); 
+    transform: rotateY(-180deg); 
+}
+#elephant {
+    position: absolute;
+    transform : rotateY(0);
+    }    
+#giraffe {
+    position: absolute;
+    transform: rotateY(0);
+}
+#panda {
+    position: absolute;
+    transform: rotateY(0);
+}
+#cow {
+    position: absolute;
+    transform: rotateY(0);
+}
+#pig {
+    position: absolute;
+    transform: rotateY(0);
+}
+#hippo {
+    position: absolute;
+    transform: rotateY(0);
 }
 /* COLOR ANIMATION FOR HEADER */
 @keyframes color-change {
@@ -94,24 +148,49 @@ body {
 /* COLOR ANIMATION FOR CARDS */
 @keyframes color-change-card {
     50% { box-shadow: 5px 10px 20px; color:#F991CC}
-
 }
-    
-/* MOBILE LAYOUT
-@media screen and (max-width: 708px ) {
+/* DANCE ANIMATION FOR WHEN CARDS MATCH */
+@keyframes dance {
+    0% {transform: rotate(0);}
+    25%{transform: rotate(15deg);}
+    50%{transform: rotate(-0);}
+    75%{transform: rotate(-15deg);}
+}
+/* START OF GAME */
+@keyframes start-game {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+        font-size: 0;
+    }
+    to {
+        background-color: #F0DCCA;
+        animation: color-change 0.5s infinite;;
+        font-size: 5em;
+        
+    }
+}
+
+/* MOBILE LAYOUT */
+@media screen and (max-width: 567px ) {
     #header {
         display: flex;
         justify-content: center;
-        font-family:  'Bungee Shade';
-        font-size: 35px; 
+        align-items: center;
+        font-family:  'Henny Penny';
+        font-size: 25px; 
         animation: color-change 0.5s infinite;
     }
-
     #container {
         display: grid;
-}
-
-    #card {
-        background-color: black; 
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: repeat(4, auto);
+        grid-gap: 10px;
+        margin: 5px;
+        perspective: 500px;
     }
-} */
+    .card {
+        background-color: #B8BACF; 
+    }
+    
+} 
