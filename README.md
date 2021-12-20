@@ -6,9 +6,8 @@ I have my own kids and thought it would be cool idea to create a matching game f
 ## Features
 
 * **The app features**
-* A timer counting down from 60 seconds. 
-* A score tracker for matched cards.
+* A timer counting down from 60 seconds.
+* A animation for cards flipping.  
 * A dance animation when cards and animals match.
-* A animal sound plays when cards and animals match.
-* Background music playing while kids play the game. 
+
 

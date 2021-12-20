@@ -38,6 +38,42 @@ body {
     animation: start-game 250ms forwards;
     font-size: 5em;
 }
+.game-over.visible {
+    display: flex;
+    animation: game-over 250ms forwards;
+    font-size: 5em;
+}
+.game-over {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    font-family: 'Henny Penny';
+}
+.you-win.visible {
+    display: flex;
+    animation: you-win 250ms forwards;
+    font-size: 5em;
+}
+.you-win {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    font-family: 'Henny Penny';
+}
 #timer {
     display: flex;
     justify-content: center; 
@@ -45,7 +81,7 @@ body {
     font-size: 25px;
     animation: color-change 0.5s infinite;
 }
-#score {
+#flips {
     display: flex;
     justify-content: center; 
     font-family: 'Henny Penny';
@@ -161,7 +197,6 @@ body {
 @keyframes start-game {
     from {
         background-color: rgba(0, 0, 0, 0);
-        animation: color-change 0.5s infinite;
         font-size: 0;
     }
     to {
@@ -171,6 +206,31 @@ body {
         
     }
 }
+/* GAME OVER */
+@keyframes game-over {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+        font-size: 0;
+    }
+    to {
+        background-color: rgba(0, 0, 0, .5);
+        color: #FE5D9F; 
+        font-size: 5em;
+    }
+}
+/* YOU WIN */
+@keyframes you-win {
+from {
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 0;
+}
+to {
+    background-color: rgba(0, 0, 0, .5);
+    color: #71B340; 
+    font-size: 5em;
+}
+}
+
 /* MOBILE LAYOUT */
 @media screen and (max-width: 567px ) {
     #header {
